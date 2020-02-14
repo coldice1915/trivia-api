@@ -128,9 +128,9 @@ class TriviaTestCase(unittest.TestCase):
                                  json={'searchTerm': '-_-'})
         data = json.loads(res.data)
 
-        self.assertEqual(res.status_code, 422)
+        self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'], False)
-        self.assertEqual(data['message'], 'unprocessable')
+        self.assertEqual(data['message'], 'resource not found')
 
     def test_get_questions_by_category(self):
         res = self.client().get('/categories/1/questions')
@@ -146,9 +146,9 @@ class TriviaTestCase(unittest.TestCase):
         res = self.client().get('/categories/100/questions')
         data = json.loads(res.data)
 
-        self.assertEqual(res.status_code, 422)
+        self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'], False)
-        self.assertTrue(data['message'], 'unprocessable')
+        self.assertTrue(data['message'], 'resource not found')
 
     def test_quiz_questions(self):
         res = self.client().post('/quizzes',
