@@ -250,7 +250,7 @@ def create_app(test_config=None):
         new_question = True
         while new_question:
             if question.id in previous_questions:
-                question = get_random_quiz_question
+                question = get_random_quiz_question()
                 if len(previous_questions) == len(questions):
                     return jsonify({
                         'success': True
