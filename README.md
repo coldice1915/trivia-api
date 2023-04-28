@@ -17,7 +17,7 @@ Start by reading the READMEs in:
 
 ### Backend
 
-The `./backend` directory contains the Flask and SQLAlchemy server, and the API documentation.
+The `./backend` directory contains the Flask and SQLAlchemy server, and the API reference.
 
 ### Frontend
 
