@@ -17,8 +17,8 @@ Start by reading the READMEs in:
 
 ### Backend
 
-The `./backend` directory contains a Flask and SQLAlchemy server.
+The `./backend` directory contains the Flask and SQLAlchemy server, and the API documentation.
 
 ### Frontend
 
-The `./frontend` directory contains a React frontend to consume the data from the Flask server.
+The `./frontend` directory contains the React frontend to consume the data from the Flask server.
